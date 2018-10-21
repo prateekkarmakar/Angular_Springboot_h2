@@ -1,0 +1,39 @@
+<form [formGroup]="bookCreateForm" (ngSubmit)="createUpdateBookList()">
+  <table>
+    <tr>
+      <td colspan=2 align="center">
+        <h3>{{panelTitle}} Book</h3>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Book Name</label></td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td><label>Author Name</label></td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td><label>Publisher Name</label></td>
+      <td><input type="text" formControlName="publisher"></td>
+    </tr>
+    <tr>
+      <td><label>Price</label></td>
+      <td><input type="text" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td><label>ISBN</label></td>
+      <td><input type="text" formControlName="isbn"></td>
+    </tr>
+    <tr style="display: none">
+      <td><label>ID</label></td>
+      <td><input type="text" formControlName="id"></td>
+    </tr>
+    <tr><td colspan=2 align="center"></td></tr>
+    <tr><td colspan=2 align="center"></td></tr>
+    <tr>
+      <td colspan=2 align="center" [hidden]="editButton"><button type="submit" class="btn btn-primary">Add Book</button></td>
+      <td colspan=2 align="center" [hidden]="!editButton"><button type="submit" class="btn btn-primary">Edit Book</button></td>
+    </tr>
+  </table>
+</form>

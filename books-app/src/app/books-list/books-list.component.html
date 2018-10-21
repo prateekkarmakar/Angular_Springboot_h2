@@ -1,0 +1,25 @@
+<h3>
+  Available Book List
+</h3>
+<div>
+  <table style="width:100%" border=0>
+    <tr>
+      <th>Book Id</th>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Publisher</th>
+      <th>Price</th>
+      <th>ISBN</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td align="center"> {{book.id}} </td>
+      <td align="center"> {{book.name}} </td>
+      <td align="center"> {{book.author}} </td>
+      <td align="center"> {{book.publisher}} </td>
+      <td align="center"> {{book.price}} </td>
+      <td align="center"> {{book.isbn}} </td>
+      <td align="center"> <button type="button" class="btn btn-primary" (click)="editBookDetails(book)">Edit</button> </td>
+      <td align="center"> <button type="button" class="btn btn-primary" (click)="deleteBookRecord(book)">Delete</button> </td>
+    </tr>
+  </table>
+</div>
